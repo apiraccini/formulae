@@ -13,7 +13,5 @@ Create virtual environment
 Install requirements
 ```pip install -r requirements.txt```
 
-**IMPORTANT**: load your screenshots as png files inside the *data* folder.
-
 Run application
 ```python app.py```
