@@ -4,16 +4,16 @@ This is a simple tool that processes a png image (ideally a screenshot of a math
 
 # Usage guide
 
-Clone git repo
-'''git clone git@github.com:apiraccini/formulae.git'''
+Clone git repo 
+```git clone git@github.com:apiraccini/formulae.git```
 
 Create virtual environment
-'''python -m venv venv'''
+```python -m venv venv```
 
 Install requirements
-'''pip install -r requirements.txt'''
+```pip install -r requirements.txt```
 
 **IMPORTANT**: load your screenshots as png files inside the *data* folder.
 
 Run application
-'''python app.py'''
+```python app.py```
