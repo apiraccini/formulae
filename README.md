@@ -8,8 +8,14 @@ The base model is Nougat, first proposed in [Nougat: Neural Optical Understandin
 Clone git repo:
 ```git clone git@github.com:apiraccini/formulae.git```
 
+Go to cloned repo:
+```cd formulae```
+
 Create virtual environment:
 ```python -m venv venv```
+
+Activate virtual environment>
+```venv\Scripts\activate```
 
 Install requirements:
 ```pip install -r requirements.txt```
