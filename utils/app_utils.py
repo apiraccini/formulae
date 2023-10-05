@@ -2,6 +2,9 @@ from PIL import Image, ImageOps
 from transformers import AutoProcessor, VisionEncoderDecoderModel, StoppingCriteriaList
 from .misc import  StoppingCriteriaScores
 import torch
+import tqdm
+import pandas as pd
+import os
 
 
 def process_formula(filepath_png):
@@ -37,3 +40,17 @@ def process_formula(filepath_png):
     markdown = processor.post_process_generation(generated, fix_markdown=False)
 
     return markdown
+
+def process_folder(folderpath):
+
+    outpath = './data/processed'
+    markdown = []
+    for file in tqdm.tqdm(os.listdir(folderpath)):
+        markdown.append(process_formula(f'{folderpath}/{file}'))
+    df = pd.DataFrame({'formulas': markdown})
+    if not os.path.exists(outpath):
+        os.mkdir(outpath)
+    df.to_csv(f'{outpath}/formulas.csv', index=False)
+
+    print(f'Your formulae are saved in {outpath}.')
+    return ''
