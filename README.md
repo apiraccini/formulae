@@ -36,7 +36,7 @@ Inside the cloned repository, in a python shell, you can do
 ```python
 from utils.app_utils import process_formula, process_folder
 
-text = process_formula('your_image_folder/')
+text = process_formula('your_image_folder/your_image.png')
 print(text)
 
 process_folder('your_image_folder')
