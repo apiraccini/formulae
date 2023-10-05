@@ -1,4 +1,4 @@
-# Formulae
+# Formulae 🤗📑
 
 ## Intro
 
@@ -8,13 +8,13 @@ The base model is Nougat, first proposed in [Nougat: Neural Optical Understandin
 ## Usage guide
 
 First clone git repo in a directory of your choice,
-```bash
+```
 git clone https://github.com/apiraccini/formulae.git
 cd formulae
 ```
 
 then you can either set up the app from terminal
-```bash
+```
 python -m venv venv
 venv\Scripts\activate
 pip install -r requirements.txt
@@ -22,7 +22,7 @@ python app.py
 ```
 
 or build a docker image and run it in a container
-```bash
+```
 docker build -t formulae_app .
 docker run -p 7860:7860 formulae_app
 ```
@@ -33,7 +33,7 @@ and paste the URL printed in the terminal in your browser.
 
 You can also use the base utilities provided for handling files directly from python code.
 Inside the cloned repository, in a python shell, you can do
-```python
+```
 from utils.app_utils import process_formula, process_folder
 
 text = process_formula('your_image_folder/')
